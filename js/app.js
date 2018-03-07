@@ -95,16 +95,16 @@ Enemy.prototype.update = function(dt) {
   Player.prototype.handleInput = function(key) {
     switch (key) {
       case 'left':
-      this.x = this.x - 100;
+      this.x = this.x - 101;
       break;
       case 'up':
-      this.y = this.y - 80;
+      this.y = this.y - 83;
       break;
       case 'right':
-      this.x = this.x + 100;
+      this.x = this.x + 101;
       break;
       case 'down':
-      this.y = this.y + 80;
+      this.y = this.y + 83;
       break;
     }
   }

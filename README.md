@@ -12,6 +12,3 @@ In this game you have a Player and Enemies (Bugs). The goal of the player is to 
 1. Objective is to reach the water
 2. Avoid Bugs, if collided the game will restart
 3. Use arrows to move up, down, left and right
-
-## References & Help
-1. [Udacity Javascript Tutorial](https://www.udacity.com/)
