@@ -1,7 +1,14 @@
+
+/*==========================================================================*/
+/*=============================General Functions============================*/
+
 // function to generate a random variable in a range
 function randomRange(min, max) {
   return Math.round(Math.random()*(max-min)+min);
 }
+
+/*==========================================================================*/
+/*=============================Enemy========================================*/
 
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
@@ -18,7 +25,6 @@ var Enemy = function(x, y, speed) {
   this.width = 80;
   this.height = 67;
 };
-
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -54,7 +60,6 @@ Enemy.prototype.update = function(dt) {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   };
 
-
   // Now write your own player class
   // This class requires an update(), render() and
   // a handleInput() method.
@@ -67,6 +72,9 @@ Enemy.prototype.update = function(dt) {
   // Place all enemy objects in an array called allEnemies
   var allEnemies = [enemy1, enemy2, enemy3];
 
+  /*==========================================================================*/
+  /*=============================General Functions============================*/
+
   // Place the player object in a variable called player
   // Place the player object in a variable called player
   var Player = function(x, y) {
@@ -77,7 +85,6 @@ Enemy.prototype.update = function(dt) {
     this.width = 50;
     this.height = 50;
   };
-
 
   // Uses keystrokes to determine which way the player
   // should move.
@@ -96,7 +103,6 @@ Enemy.prototype.update = function(dt) {
       this.y = this.y + 80;
       break;
     }
-
   }
 
   // Update the player's position, required method for game
@@ -109,7 +115,6 @@ Enemy.prototype.update = function(dt) {
       console.log("You win");
       // to restart the game
       this.resetPosition();
-
     } else if (this.y < 0) {
       this.y = 0;
     } else if (this.y > 400) {
