@@ -18,10 +18,15 @@ var Enemy = function(x, y, speed) {
   // The image/sprite for our enemies, this uses
   // a helper we've provided to easily load images
   this.sprite = 'images/enemy-bug.png';
+
+  //set the starting coordinates for the Bugs
   this.x = x;
   this.y = y;
+
+  // set the speed
   this.speed = speed;
 
+  // set hte bigs length and width
   this.width = 80;
   this.height = 67;
 };
@@ -34,14 +39,13 @@ Enemy.prototype.update = function(dt) {
   // all computers.
   dt = 20;
   if (this.x >= 500) {
-
     // create a time lag before bugs move back on the screen
     this.x = -randomRange(200,800);
 
-    // randomize bug speed for each turn
+    // randomize bug speed for each appearance
     this.speed = randomRange(2,6);
-
   }
+
   this.x += this.speed;
 
   if (this.x < player.x + player.width &&
@@ -113,7 +117,6 @@ Enemy.prototype.update = function(dt) {
       this.x = 400;
     } else if (this.y === 0) {
       console.log("You win");
-      // to restart the game
       this.resetPosition();
     } else if (this.y < 0) {
       this.y = 0;

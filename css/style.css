@@ -1,3 +1,11 @@
 body {
     text-align: center;
 }
+
+/* put galaxy image in the background */
+body {
+  background-image: url('../images/galaxy.jpg');
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
